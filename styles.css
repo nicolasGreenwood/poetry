@@ -96,6 +96,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: end;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .sub-hero {
