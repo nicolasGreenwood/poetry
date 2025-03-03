@@ -1,0 +1,384 @@
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  display: grid;
+  font-family: "Roboto";
+  font-weight: 100;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.one-column-left {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.one-column-middle {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.one-column-right {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.two-column-left {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.two-column-right {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.full-width {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.slide-from-left {
+    opacity: 0;
+    animation: slide-from-left 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.main-nav {
+  width: 150px;
+  height: 200px;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: end;
+  z-index: 10;
+}
+
+.nav-item {
+  color: white;
+  font-size: 25px;
+  font-family: "Italiana";
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.hero-header {
+  line-height: 0.7;
+  margin: 0;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-family: "Italiana";
+  font-size: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.sub-hero {
+    display: block;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#landing-slideshow {
+    width: 300px;
+    max-height: 400px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.slideshow-controls {
+    width: fit-content;
+    position: absolute;
+    top: 30px;
+    left: 360px;
+}
+
+.slideshow-controls a {
+    display: block;
+    margin: 30px 0;
+    font-style: italic;
+    font-size: large;
+}
+
+.slideshow-controls a:hover, 
+.swiper-slide a:hover {
+    text-decoration: underline;
+}
+
+.slideshow-prev {
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.slideshow-next {
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.swiper-slide {
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-slide h2 {
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+.swiper-slide a {
+  display: block;
+  position: absolute;
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: small;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+.landing-flow-barrier {
+    height: 100vh;
+}
+
+.large-descript {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.poem-link {
+  display: block;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 100;
+  border-bottom: 1px solid white;
+}
+
+.poem-link svg {
+    height: 12px;
+    fill: white;
+}
+
+.page-title {
+  margin: 0;
+  font-family: "Italiana";
+  font-size: 200px;
+  border-bottom: 1px solid;
+  word-break: break-all;
+}
+
+.half-portrait {
+  width: 100%;
+  transform: scaleX(-1);
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+  margin-top: 5rem;
+}
+
+figcaption {
+  margin-top: 1rem;
+  opacity: 0.5;
+  font-style: italic;
+}
+
+.art-type {
+  font-style: normal;
+  background-color: white;
+  color: black;
+  font-family: "Italiana";
+}
+
+.video {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+label {
+  display: flex;
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 1.5rem;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.contact-input {
+  outline: 0;
+  border: none;
+  border: 1px solid black;
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+textarea {
+  width: calc(100% - 18px);
+  height: 12.5rem;
+  padding: 8px;
+  resize: vertical;
+}
+
+.sub-form {
+    align-self: end;
+}
+
+.h-captcha > * {
+  display: block;
+  margin-left: auto;
+}
+
+#submit-btn, #sub-btn {
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+#submit-btn:hover, #sub-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+footer {
+  margin-top: 5rem;
+  border-top: 1px solid;
+}
+
+footer h2 {
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+footer p, footer a {
+  font-size: small;
+}
+
+footer a {
+  margin-top: 1rem;
+  display: block;
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  body {
+    padding: 10px;
+  }
+
+  .main-nav {
+    width: 100px;
+    height: 120px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  #landing-slideshow {
+    width: 200px;
+    height: 300px;
+    top: 164px;
+    left: 10px;
+  }
+
+  .slideshow-controls {
+    left: auto;
+    right: 10px;
+    top: 200px;
+  }
+
+  .slideshow-controls a {
+    font-size: x-small;
+  }
+
+  .swiper-slide h2 {
+    left: 10px;
+  }
+
+  .large-descript {
+    font-size: 3rem;;
+  }
+
+  .hero-header {
+    bottom: 10px;
+    right: 5px;
+    font-size: 5rem;
+  }
+
+  .sub-hero {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    width: 50%;
+  }
+
+  .page-title {
+    margin-top: 164px;
+    font-size: 4rem;
+  }
+
+  .one-column-left, 
+  .one-column-middle, 
+  .one-column-right,
+  .two-column-left,
+  .two-column-right {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+
+}

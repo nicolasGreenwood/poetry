@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nicolas Greenwood: Contact</title>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <a href="index.html">
+        <span class="nav-item">home</span>
+      </a>
+      <a href="poems.html">
+        <span class="nav-item">poems</span>
+      </a>
+      <a href="misc.html">
+        <span class="nav-item">miscellaneous</span>
+      </a>
+      <a href="contact.html">
+        <span class="nav-item">contact</span>
+      </a>
+    </nav>
+    <h1 class="full-width page-title slide-from-left">CONTACT</h1>
+    <p class="one-column-middle">
+      Thoughts? Contructive criticism? Collaboration ideas? Simply want to tell me something? You may contact me below. 
+    </p>
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      id="contact-form"
+      class="one-column-middle"
+    >
+      <input
+        type="hidden"
+        name="access_key"
+        value="3c1472c9-6adb-4fef-87fa-df6138ada861"
+      />
+
+      <label for="name">
+        Name:
+        <input
+          id="name"
+          type="text"
+          name="name"
+          class="contact-input"
+          required
+        />
+      </label>
+      <label for="email">
+        Email:
+        <input
+          id="email"
+          type="email"
+          name="email"
+          class="contact-input"
+          required
+        />
+      </label>
+      <label for="message">Message:</label>
+      <textarea
+        id="message"
+        name="message"
+        class="contact-input"
+        placeholder="Type anything..."
+        required
+      ></textarea>
+
+      <div class="h-captcha" data-captcha="true"></div>
+
+      <input
+        type="hidden"
+        name="redirect"
+        value="https://web3forms.com/success"
+      />
+
+      <input id="submit-btn" type="submit" class="contact-input" />
+    </form>
+    <p class="one-column-middle">
+      Thank you for contacting me. While I do my best to read and respond to
+      each message, replies are not gauranteed. Thank you for your
+      understanding.
+    </p>
+
+    <footer class="full-width">
+      <h2>Nicolas Greenwood: A Poet</h2>
+      <p>
+        Designed and developed by Nicolas Greenwood. Form functionality made
+        possible by Web3Forms.
+      </p>
+      <a class="footer-links" href="/index.html">Home</a>
+      <a class="footer-links" href="/poems.html">Poems</a>
+      <a class="footer-links" href="/misc.html">Miscellaneous</a>
+      <a class="footer-links" href="/contact.html">Contact</a>
+      <p>© Nicolas Greenwood, 2025. All right reserved.</p>
+    </footer>
+    <script>
+      const contactForm = document.getElementById("contact-form");
+
+      contactForm.addEventListener("submit", function (e) {
+        const hCaptcha = contactForm.querySelector(
+          "textarea[name=h-captcha-response]"
+        ).value;
+
+        if (!hCaptcha) {
+          e.preventDefault();
+          alert("Please fill out captcha field");
+          return;
+        }
+      });
+    </script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+  </body>
+</html>
