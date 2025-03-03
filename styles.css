@@ -96,6 +96,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: end;
+  text-rendering: optimizeSpeed;
 }
 
 .sub-hero {
