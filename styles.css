@@ -1,11 +1,11 @@
 @keyframes slide-from-left {
   from {
     opacity: 0;
-    transform: translateX(-50vw);
+    /* transform: translateX(-50vw); */
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    /* transform: translateX(0); */
   }
 }
 
@@ -96,8 +96,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: end;
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 .sub-hero {
