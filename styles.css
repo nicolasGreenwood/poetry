@@ -89,9 +89,8 @@ a {
   line-height: 0.7;
   margin: 0;
   position: absolute;
-  top: auto;
-  bottom: auto;
-  transform: translateY(calc(100vh - 30px));
+  right: 30px;
+  bottom: 30px;
   font-family: "Italiana";
   font-size: 280px;
   display: flex;
